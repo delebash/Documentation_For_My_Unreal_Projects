@@ -95,6 +95,10 @@ If you are not using automatic season change you can check the Seasons checkbox 
 
 
 #### Material Instance for Trees
+
+**Bug Note:**  There is a small bug for MS Trees that have the Albedo Tint control like the Norway Maple.  The tree will show up purple.  Just open the MI for the leaves and change the Albedo Tint to 1,1,1,0
+
+
 For trees the wind system is the default system that comes with MS trees.  I have added Project Nature interaction to the tree materials.  In addition we have UDW and season change.
 
 1) To enable UDW and Season change select your tree in the scene or find the MI's for tree you want. You will notice several MI's for leaves, bark, and imposter.  For each MI you will need to enable settings to get the effect you want.
