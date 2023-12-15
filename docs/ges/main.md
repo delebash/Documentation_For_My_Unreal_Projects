@@ -70,14 +70,14 @@ Video Demo <div style="position: relative; width: 100%; padding-bottom: 56.25%">
 4) With your project closed.  From your folder explorer in your projects Content Folder, navigate to the folder GlobalEnvironmentalSystem --> Integrations --> Megascans.  Copy the MSPreset folder and paste it in your Content folder overwriting the existing MSPreset folder. 
 
 #### Material Instance for Foliage
-##### <u>Wind</u>
+##### Wind
 
 I have replaced the default wind for Megascan foliage with Project Natures foliage and interaction system. For each MI you will need to check the 3 check boxes shown below under Preset Parameters. 
 ![](../_images/megascan%20wind.png)
 
 Additional information on wind and bending settings can be found in the [Project Nature Documentation](./ProjectNatureDocumentation.pdf)
 
-##### <u>Ultra Dynamic Weather and Automatic Season</u>
+##### Ultra Dynamic Weather and Automatic Season
 
 1) Check box Use UDW Weather ? and enable it.  
   
@@ -90,7 +90,7 @@ Additional information on wind and bending settings can be found in the [Project
 
 ![](../_images/udw%20season%20affected%20by.png)
 
-##### <u>Manual Health and Season</u>
+##### Manual Health and Season
 If you are not using automatic season change you can check the Seasons checkbox and manually adjust the color.  In addition there are global settings in the BP_GES for seasons.
 
 
@@ -107,7 +107,7 @@ For trees the wind system is the default system that comes with MS trees.  I hav
 ![](../_images/ms%20tree%20enable%20udw.png)
 
 
-##### <u>Ultra Dynamic Weather and Automatic Season</u>
+##### Ultra Dynamic Weather and Automatic Season
 
 MS tree leaves have the same settings as MS foliage except in how you enable winter.  MS trees has the Season setting enabled by default.  .
 
@@ -121,7 +121,7 @@ The Bark MI's only have Use UDW Weather ?
 The Impostor has the same settings as the leaves, depending on performance you may or may not want to enable.
 
 
-##### <u>Manual Health and Season</u>
+##### Manual Health and Season
 
 Same as foliage
 
