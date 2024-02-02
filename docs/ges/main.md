@@ -69,7 +69,7 @@ Video Demo <div style="position: relative; width: 100%; padding-bottom: 56.25%">
 
 4) With your project closed.  From your folder explorer in your projects Content Folder, navigate to the folder GlobalEnvironmentalSystem --> Integrations --> Megascans.  Copy the MSPreset folder and paste it in your Content folder overwriting the existing MSPreset folder. 
 
-#### Material Instance for Foliage
++#### Material Instance for Foliage
 ##### Wind
 
 I have replaced the default wind for Megascan foliage with Project Natures foliage and interaction system. For each MI you will need to check the 3 check boxes shown below under Preset Parameters. 
@@ -161,3 +161,99 @@ Same as foliage
 ## 5) <u>Add GES Blueprint to your Scene</u>
 
 1) Navigate to GlobalEnvironmentalSystem --> Blueprints and drage BP_GES to your scene.
+
+# <u>Beta Docs</u>
+
+## Major Changes
+
+1) Reorganized each system and it's features to it's own heading. 
+2) Removed wind speed offsets in favor of new wind speed array system.
+
+## Understanding Wind speed array and Weather Names
+
+ This new systems changes the way we manage wind speed and weather names.  Offsets have been removed in favor of an array of wind speeds based on either the current weather name or the current wind speed from UDW.
+ 
+ Let's take a look at the new system and I will start explaining how to use it.
+
+![](../_images/Screenshots/Screenshot%202024-02-02%20135310.png)
+
+1. **Run on GES** -- This determines when GES fires and runs through each enabled system.  
+    
+    a. **Weather Name Change** --  Weather names are defined in the **UDW Weather Display Name Array**. As the weather name changes from say Clear Skies to Cloudy GES gets notified of that name change. We will explain how to define this array later.  By default the array is filled for use with the predefined UDW weather types.
+    
+    b. **Wind Speed Change** --  Wind speed change does not use the Weather Name Change event.  Both the Weather Name Change and the Wind speed change use a polling method to determine the current values of the UDW current weather wind speed. However, Wind Speed Change runs GES every time the poll event is fired, where Weather Name Change only runs GES on a change of Weather Name. The **Poll UDW for Weather Changes** determines in seconds how often we check for these values.  By default it is set to 1/10 of a second.  If you are only going to use Wind Speed Change then you do not need to define the **UDW Weather Display Name Array**
+    
+    c. **Wind Speed Change with Weather Names** -- This uses the Wind Speed Change method but also displays Weather Names.  This can be useful if you want to check the UDW weather values more often but also want to know what the Weather Name is.
+
+2. **Poll UDW for Weather Changes** -- Poll in seconds for UDW current weather values.  Default 1/10th or .1 of a second.
+
+3. **UDW Weather Display Name Array** -- Define each weather name based on various values of the current UDW weather.  UDW weather changes based on 1. The weather preset chosen, in this case the exact values defined in the weather preset are output if you have set transition to 0.  However if you are using a transition speed or an override volume then the weather will change gradually.  As an example say you have Clear Skies set as your current weather preset. Then you have an override volume with a weather preset set to Thunderstorm.  Than as your player moves through the override volume the UDW weather values will change, such as wind speed, cloud amount, rain amount and so on.  These values will not directly match each preset so we have to make our own determination of when we want the weather display name to show or match.
+
+Lets take a look at a couple of pictures illustrating the values UDW generates for weather types. Under the Debug heading you can enable **Debug Weather Values** to print to the screen the current weather values.  This is very useful when setting up a display name.
+
+![](../_images/Screenshots/Screenshot%202024-02-02%20143450.png)
+
+As you can see we have the current weather values.  Since we are not in any transition the values exactly match the current weather preset.  The current preset is set to Clear Skies.  With wind speed being 2.0 and every other value 0.0
+
+![](../_images/Screenshots/Screenshot%202024-02-02%20143518.png)
+
+Now lets walk forward into our override volume which is set to Thunderstorm.  We can see the weather values changing and if you look at the **UDW Weather Display Name Array** we can see the values we are defining in order to determine when we change the weather name.  We can see that the value of cloud is 0.52 and we have defined Partly Cloudy Cloud Coverage between 0.51 and 3.8 for Partly Cloudy. Although the picture is not showing Clear Skies it is defined between 0.0 and 0.50.  The check box for each weather such as Use Cloud Coverage is like an and statement.  So for each item checked the weather has to match the between values in order for that weather name to be true and display.  You have to be careful when defining weather names as you might overlap the truthiness of a weather name.  So if you define one weather name to use Cloud Coverage between 0 and 1 for Clear Skies and Light Snow to also have Cloud Coverage between 0 and 1 then both will be true and you will get the last one.  This is why we have a checkbox for each value as we may use multiple values to determine a weather name.  Use the debug feature to test your new weather types and an override volume to make sure you are getting the weather names you want.
+
+![](../_images/Screenshots/Screenshot%202024-02-02%20152530.png)
+
+4.  **How are each systems wind settings determined?**
+
+    1. MS Use Wind Speed Array Or Direct -- If checked then you will use the Wind speed array.  Else you will use direct value output of UDW current wind speed which is 0-10
+    
+    2. Explanation of the Wind Speed Array -- 
+       
+        a. **Use Weather Name or Value**  -- You can choose to match your chosen wind speed based on Weather Name using the **Weather Type Enum** or a wind speed range value.  If using value then you do not need to choose a weather type.  Instead use the **Wind Speed Greater Than Equal** and **Wind Speed Less Than Equal** fields.  So if you define the fields to be 0 and 2 respectively.  Then when the UDW value is between 0 and 2 then this array value will be true and use the settings in this array. In image number 2 we have set the range and the wind speed of our foliage and trees, we could also set the other values for MS.  So when UDW wind speed is between 0-2 then our foliage speed will be 3 and our tree wind speed will be 4.
+       
+       
+    
+    ![](../_images/Screenshots/Screenshot%202024-02-02%20154441.png)
+    
+    ![](../_images/Screenshots/Screenshot%202024-02-02%20155840.png)
+    
+    
+      b. If using Weather name then when the display name that you defined in the Weather Display Names matches the Weather Type Enum then this array value will be true.
+      
+For current testing Megascans, Mawi, and Brushify are using this new method.
+
+5. **Oceanology Setup has changed** -- I have removed the Oceanology code from the GES_BP to prevent compile errors when Oceanology is not installed.  You will need to goto the below links and copy and paste the code and hook them up after you have installed Oceanology and enabled it in your Plugins for that project.
+
+    **New Oceanology Setup**
+    
+    Make sure Oceanology is installed and the plugin is enables.
+    
+   Go to this link https://blueprintue.com/blueprint/1bi82s7z/ which is blueprintue where you can copy and paste nodes.  Scroll down and click on code to copy. In the GES Integrations>Oceanology>BPFunctions open BP_GES_Oceanology then zoom out and move over to get some space and paste.  Then connect the variables up, compile, and save See Picture
+   
+   ![](../_images/Screenshots/Screenshot%202024-02-02%20174826.png)
+   
+   **Oceanology Preset Setup** -- (This is an experimental feature of Oceanology and currently is buggy.)
+   
+   This needs to be added to an event graph.  I am using my example level blueprint for testing. 
+   
+   Open BP_GES GlobalEnvironmentalSystem>Blueprints>BP_GES.  Goto the Event Graph.  Go to https://blueprintue.com/blueprint/febz_d3y/ copy.  In the event graph move above existing code you will see a reroute node with no connection.  Paste there and connect. Compile and save.
+   
+   ![](../_images/Screenshots/Screenshot%202024-02-02%20175818.png)
+   
+   Go to your GES properties and enable Oceanology, Define your wind speed array if not already defined and check Use Preset Transition.
+   
+   **Lakeology Setup**
+   
+   Go to this link https://blueprintue.com/blueprint/z_d8ydzp/  Scroll down and click on code to copy. In the GES Integrations>Lakeology>BPFunctions open BP_GES_Lakeology then zoom out and move over to get some space and paste.  Then connect the variables up, compile, and save See Picture
+   
+   ![](../_images/Screenshots/Screenshot%202024-02-02%20180353.png)
+       
+    
+
+    
+    
+    
+
+
+    
+ 
+
+    
