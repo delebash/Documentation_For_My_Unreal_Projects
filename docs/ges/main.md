@@ -154,9 +154,17 @@ Same as foliage
 
 ### Mawi -- no setup needed
 
-### Particle and Wind Control System -- no setup needed
+### Particle and Wind Control System -- 
 
-### Ambient Wind System -- no setup needed
+Connect the line in the GES Integrations>Particle_Wind_Control_System>BPFunctions>BP_GES_Particles_Wind_Control_System function.
+
+![](../_images/Screenshots/Screenshot%202024-02-02%20190029.png)
+
+### Ambient Wind System 
+
+Connect the line in the GES Integrations>AmbientWindSystem>BPFunctions>BF_GES_AmbientWindSystem! function.
+
+![](../_images/Screenshots/Screenshot%202024-02-02%20185824.png)
 
 ## 5) <u>Add GES Blueprint to your Scene</u>
 
