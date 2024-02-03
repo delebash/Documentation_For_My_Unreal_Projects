@@ -231,6 +231,8 @@ Now lets walk forward into our override volume which is set to Thunderstorm.  We
    
     For current testing Megascans, Mawi, and Brushify are using this new method.
 
+    You can use the new **Level Blueprint** for easy testing.  Copy and paste it in a new level blueprint.  Right click on Set GES and Set UDW and create variables compile and save.  For thunderstorm I have added a variable for transition speed.  This is in the Oceanology setting for testing. Get level blueprint from here https://blueprintue.com/blueprint/p-4zaw-8/
+    
 6. **Oceanology Setup has changed** -- I have removed the Oceanology code from the GES_BP to prevent compile errors when Oceanology is not installed.  You will need to goto the below links and copy and paste the code and hook them up after you have installed Oceanology and enabled it in your Plugins for that project.
 
     **New Oceanology Setup**
@@ -241,7 +243,7 @@ Now lets walk forward into our override volume which is set to Thunderstorm.  We
    
    ![](../_images/Screenshots/Screenshot%202024-02-02%20174826.png)
    
-   **Oceanology Preset Setup** -- (This is an experimental feature of Oceanology and currently is buggy.)
+   **Oceanology Preset Transition Setup** -- (This is an experimental feature of Oceanology and currently is buggy.)
    
    This needs to be added to an event graph.  I am using my example level blueprint for testing. 
    
