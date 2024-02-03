@@ -225,10 +225,13 @@ Now lets walk forward into our override volume which is set to Thunderstorm.  We
     
     
       b. If using Weather name then when the display name that you defined in the Weather Display Names matches the Weather Type Enum then this array value will be true.
-      
-For current testing Megascans, Mawi, and Brushify are using this new method.
+     
+5. **Custom Weather Display Names**
+    So all the default Weather Names that come with UDW are setup for you.  If you want a custom name for the Enum you need to add it to the GES>Enum>GES_UDS_Weather_Display_Names file.  Now it will be displayed in the Weather Display Name drop down list and you can associate it with a weather type the same way as above.  For example I added Sun Shower to the Enum.  Then I setup a new UDW Weather Preset and set Rain to 3 and Wind Intensity to 3 and everything else to 0.  Then in the GES UDW Weather Display Name Array I added an entry for it with Cloud Coverage enabled and set to 0 for both and Rain enabled set to .1 and 3.
+   
+    For current testing Megascans, Mawi, and Brushify are using this new method.
 
-5. **Oceanology Setup has changed** -- I have removed the Oceanology code from the GES_BP to prevent compile errors when Oceanology is not installed.  You will need to goto the below links and copy and paste the code and hook them up after you have installed Oceanology and enabled it in your Plugins for that project.
+6. **Oceanology Setup has changed** -- I have removed the Oceanology code from the GES_BP to prevent compile errors when Oceanology is not installed.  You will need to goto the below links and copy and paste the code and hook them up after you have installed Oceanology and enabled it in your Plugins for that project.
 
     **New Oceanology Setup**
     
