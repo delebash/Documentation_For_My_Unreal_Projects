@@ -160,7 +160,7 @@ Connect the line in the GES Integrations>Particle_Wind_Control_System>BPFunction
 
 ![](../_images/Screenshots/Screenshot%202024-02-02%20190029.png)
 
-### Ambient Wind System 
+### Ambient Wind System --
 
 Connect the line in the GES Integrations>AmbientWindSystem>BPFunctions>BF_GES_AmbientWindSystem! function.
 
