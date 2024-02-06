@@ -69,7 +69,7 @@ Video Demo <div style="position: relative; width: 100%; padding-bottom: 56.25%">
 
 4) With your project closed.  From your folder explorer in your projects Content Folder, navigate to the folder GlobalEnvironmentalSystem --> Integrations --> Megascans.  Copy the MSPreset folder and paste it in your Content folder overwriting the existing MSPreset folder. 
 
-+#### Material Instance for Foliage
+#### Material Instance for Foliage
 ##### Wind
 
 I have replaced the default wind for Megascan foliage with Project Natures foliage and interaction system. For each MI you will need to check the 3 check boxes shown below under Preset Parameters. 
