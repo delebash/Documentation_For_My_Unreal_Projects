@@ -193,6 +193,16 @@ You will need to go to the below link and copy and paste the code and hook them 
    
    ![](../_images/Screenshots/Screenshot%202024-02-02%20175818.png)
    
+   Next click on the Time Line node in the nodes you just pasted from above.  Click add track and select new float track.  Then in the external curve drop down type OC and choose UpdateOCWavesTimeline
+   
+   ![](../_images/Screenshots/oc1.png)
+   
+   ![](../_images/Screenshots/oc2.png)
+   
+   ![](../_images/Screenshots/oc3.png)
+   
+   
+   
    Go to your GES properties and enable Oceanology, Define your wind speed array if not already defined and check OC Use Preset Transition.
    
 **Oceanology Preset Transition Low Hi**
