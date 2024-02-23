@@ -60,6 +60,16 @@ Video Demo <div style="position: relative; width: 100%; padding-bottom: 56.25%">
 
 5) Setup individual systems, see next section
 
+6) Ges video playlist https://www.youtube.com/playlist?list=PLFCVXzupw1r8cSfpG7na7TCxghJVpj1Ov
+
+<div style="position: relative; width: 100%; padding-bottom: 56.25%">
+<iframe src="https://www.youtube.com/embed/0sirSDGcr2I" 
+        title="GES - General Setup information with Megascan specific setup" frameborder="0" allowfullscreen
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        style="position: absolute; width: 100%; height: 100%;">
+</iframe>
+</div>
+
 
 ## 4) <u>Individual System setup</u>
 
@@ -136,6 +146,19 @@ The Impostor has the same settings as the leaves, depending on performance you m
 ##### Manual Health and Season
 
 Same as foliage
+
+### Wind Speed Array
+
+This is how you change the wind speed of your assets based on UDW wind speed
+
+<div style="position: relative; width: 100%; padding-bottom: 56.25%">
+<iframe src="https://www.youtube.com/embed/dcRN69tyMhQ" 
+        title="Ges - Explanation of the wind speed array" frameborder="0" allowfullscreen
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        style="position: absolute; width: 100%; height: 100%;">
+</iframe>
+</div>
+
 
 ### **Brushify Setup**
 
