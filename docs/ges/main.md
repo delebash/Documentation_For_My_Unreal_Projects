@@ -147,19 +147,6 @@ The Impostor has the same settings as the leaves, depending on performance you m
 
 Same as foliage
 
-### Wind Speed Array
-
-This is how you change the wind speed of your assets based on UDW wind speed
-
-<div style="position: relative; width: 100%; padding-bottom: 56.25%">
-<iframe src="https://www.youtube.com/embed/dcRN69tyMhQ" 
-        title="Ges - Explanation of the wind speed array" frameborder="0" allowfullscreen
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        style="position: absolute; width: 100%; height: 100%;">
-</iframe>
-</div>
-
-
 ### **Brushify Setup**
 
 1) With your project closed.  From your folder explorer in your projects Content Folder, navigate to the folder GlobalEnvironmentalSystem --> Integrations --> Brushify
@@ -181,18 +168,22 @@ This is how you change the wind speed of your assets based on UDW wind speed
 2) Copy SpeedTreeBillboardMaster.uasset and SpeedTreeMaster.uasset and overwrite those files in you Engine folder.  As an alternative in your project make sure you show your Engine folder by clicking the asterick and checking Show Engine.  Search for each of the above assets and for each one choose delete and then in the delete window choose replace.  In the replace with choose the assets with the same name inside the Integrations --> SpeedTree folder. 
 
 
-### **Mae** -- no setup needed
+### **Mae** 
 
-### **Mawi** -- no setup needed
+no setup needed
 
-### **Particle and Wind Control System** -- 
+### **Mawi** 
+
+no setup needed
+
+### **Particle and Wind Control System**
 
 Connect the line execution line in the below function
 Integrations>Particle_Wind_Control_System>BPFunctions>BP_GES_Particles_Wind_Control_System function.
 
 ![](../_images/Screenshots/Screenshot%202024-02-21%20232140.png)
 
-### **Ambient Wind System** --
+### **Ambient Wind System** 
 
 Connect the line in the GES Integrations>AmbientWindSystem>BPFunctions>BF_GES_AmbientWindSystem! function.
 
@@ -200,7 +191,8 @@ Connect the line in the GES Integrations>AmbientWindSystem>BPFunctions>BF_GES_Am
 ![](../_images/Screenshots/Screenshot%202024-02-02%20185824.png)
 
 
-### **Oceanology** -- 
+### **Oceanology**
+
 You will need to go to the below link and copy and paste the code and hook them up after you have installed Oceanology and enabled it in your Plugins for that project.
 
  Go to this link https://blueprintue.com/blueprint/1bi82s7z/ Scroll down and click on code to copy. In the GES Integrations>Oceanology>BPFunctions open BP_GES_Oceanology then zoom out and move over to get some space and paste.  Then connect things up as shown in the picture below and save and compile. 
@@ -208,7 +200,8 @@ You will need to go to the below link and copy and paste the code and hook them 
  ![](../_images/Screenshots/Screenshot%202024-02-22%20000639.png)
    
    
-**Oceanology Preset Transition Setup** -- (This is an experimental feature of Oceanology and currently is buggy.)
+**Oceanology Preset Transition Setup** 
+(This is an experimental feature of Oceanology and currently is buggy.)
    
    This needs to be added to an event graph.  I am using my example level blueprint for testing. 
    
@@ -232,7 +225,7 @@ You will need to go to the below link and copy and paste the code and hook them 
 Instead of using the wind speed array to determine which oceanology preset to use you can specify a low to high preset.  As an example choose a Low Oceanology Preset of Beufort Calm and a Hi Oceanology Preset of Beufort Severe Gail. Then in addition to checking OC Use Preset Transition check OC Use Low Hi  Transition.  This means that as the wind speed increases it will transition from the low preset to the high preset and vice verse.
 
 
-### **Oceanology Lake referred to as Lakeology** --
+### **Oceanology Lake referred to as Lakeology**
 
 You will need to go to the below link and copy and paste the code and hook them up after you have installed Oceanology and enabled it in your Plugins for that project.
 
@@ -242,9 +235,21 @@ You will need to go to the below link and copy and paste the code and hook them 
 
 ## 5) <u>Add GES Blueprint to your Scene</u>
 
-Navigate to GlobalEnvironmentalSystem --> Blueprints and drage BP_GES to your scene.
+Navigate to GlobalEnvironmentalSystem --> Blueprints and drag BP_GES to your scene.
 
-# <u>Understanding how to adjust wind speed for your systems</u>
+## 6) <u>Wind Speed Array</u>
+
+This is how you change the wind speed of your assets based on UDW wind speed
+
+<div style="position: relative; width: 100%; padding-bottom: 56.25%">
+<iframe src="https://www.youtube.com/embed/dcRN69tyMhQ" 
+        title="Ges - Explanation of the wind speed array" frameborder="0" allowfullscreen
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        style="position: absolute; width: 100%; height: 100%;">
+</iframe>
+</div>
+
+### Understanding how to adjust wind speed for your systems
 
 1. **Use Wind Speed Event, Use Weather Name Event** -- This determines when GES fires and runs through each enabled system.  
     
@@ -254,9 +259,13 @@ Navigate to GlobalEnvironmentalSystem --> Blueprints and drage BP_GES to your sc
     
     c. Both are enabled by default as this covers any case.
 
-2. **Use GES Or Weather System Wind Direction** -- Wind direction can be controlled using the GES wind sock or from the weather system such as UDS or UDW which is the weather part of UDS.
+2. **Use GES Or Weather System Wind Direction** -- 
 
-3. **Poll for Weather Changes** -- Poll in seconds for UDW current weather values.  Default 1/10th or .1 of a second.
+Wind direction can be controlled using the GES wind sock or from the weather system such as UDS or UDW which is the weather part of UDS.
+
+3. **Poll for Weather Changes** -- 
+
+Poll in seconds for UDW current weather values.  Default 1/10th or .1 of a second.
 
 4. **The default setup is to use wind speed change instead of weather name change** so you can skip sections 6 and 7 and part of 5.
 
@@ -278,7 +287,9 @@ Navigate to GlobalEnvironmentalSystem --> Blueprints and drage BP_GES to your sc
     
       b. If using Weather name then when the display name that you defined in the Weather Display Names matches the Weather Type Enum then this array value will be true.
 
-6. **UDW Weather Display Name Array -- Skip this section if you only want to use wind speed change** -- Define each weather name based on various values of the current UDW weather.  UDW weather changes based on 1. The weather preset chosen, in this case the exact values defined in the weather preset are output if you have set transition to 0.  However if you are using a transition speed or an override volume then the weather will change gradually.  As an example say you have Clear Skies set as your current weather preset. Then you have an override volume with a weather preset set to Thunderstorm.  Than as your player moves through the override volume the UDW weather values will change, such as wind speed, cloud amount, rain amount and so on.  These values will not directly match each preset so we have to make our own determination of when we want the weather display name to show or match.
+6. **UDW Weather Display Name Array -- Skip this section if you only want to use wind speed change** -- 
+
+Define each weather name based on various values of the current UDW weather.  UDW weather changes based on 1. The weather preset chosen, in this case the exact values defined in the weather preset are output if you have set transition to 0.  However if you are using a transition speed or an override volume then the weather will change gradually.  As an example say you have Clear Skies set as your current weather preset. Then you have an override volume with a weather preset set to Thunderstorm.  Than as your player moves through the override volume the UDW weather values will change, such as wind speed, cloud amount, rain amount and so on.  These values will not directly match each preset so we have to make our own determination of when we want the weather display name to show or match.
 
 Lets take a look at a couple of pictures illustrating the values UDW generates for weather types. Under the Debug heading you can enable **Debug Weather Values** to print to the screen the current weather values.  This is very useful when setting up a display name.
 
@@ -294,20 +305,26 @@ Now lets walk forward into our override volume which is set to Thunderstorm.  We
 
 7. **Custom Weather Display Names -- Skip if using wind speed change**
     So all the default Weather Names that come with UDW are setup for you.  If you want a custom name for the Enum you need to add it to the GES>Enum>GES_UDS_Weather_Display_Names file.  Now it will be displayed in the Weather Display Name drop down list and you can associate it with a weather type the same way as above.  For example I added Sun Shower to the Enum.  Then I setup a new UDW Weather Preset and set Rain to 3 and Wind Intensity to 3 and everything else to 0.  Then in the GES UDW Weather Display Name Array I added an entry for it with Cloud Coverage enabled and set to 0 for both and Rain enabled set to .1 and 3.
+    
 
-8. **Level Blueprint** for testing and example of how to use GES in a blueprint.  Go to this link https://blueprintue.com/blueprint/p-4zaw-8/ Scroll down and click on code to copy. Open your level blueprint
+## 7) <u>UDW Level Blueprint for testing</u>
+An example blueprint that demonstrates how changing UDW weather interacts with GES.  Go to this link https://blueprintue.com/blueprint/p-4zaw-8/ Scroll down and click on code to copy. Open your level blueprint and paste.
+
 
 ![](../_images/Screenshots/Screenshot%202024-02-22%20003311.png)
 
 Paste the information you copied above into the blueprint.  Then right click and choose create variable for each variable in the comment box indicated. Also in the Create Menu drop down type GES and choose GES_MainMenuWidget.  You can see in the comments how the functions are called to make GES work.
 
-9. Using an alternate wind system
+<div style="position: relative; width: 100%; padding-bottom: 56.25%">
+<iframe src="https://www.youtube.com/embed/8yauMzqsLEE" 
+        title="Ges - Level blueprint for testing" frameborder="0" allowfullscreen
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        style="position: absolute; width: 100%; height: 100%;">
+</iframe>
+</div>
 
-    a. **Sky Creator setup**
-    
-    See video here.
-    
-
+## 8) <u>Using an alternate wind system</u>
+a. **Sky Creator**
 
 
   [1]: https://www.unrealengine.com/marketplace/en-US/product/sky-creator
