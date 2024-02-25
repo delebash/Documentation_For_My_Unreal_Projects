@@ -6,7 +6,7 @@ Make your landscape interact with weather, wind, water, foliage and your player 
 Video Demo <div style="position: relative; width: 100%; padding-bottom: 56.25%">
 <iframe src="https://www.youtube.com/embed/CfE0y1k4r6w" 
         title="GES Demo" frameborder="0" allowfullscreen
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         style="position: absolute; width: 100%; height: 100%;">
 </iframe>
 </div>
@@ -65,7 +65,7 @@ Video Demo <div style="position: relative; width: 100%; padding-bottom: 56.25%">
 <div style="position: relative; width: 100%; padding-bottom: 56.25%">
 <iframe src="https://www.youtube.com/embed/0sirSDGcr2I" 
         title="GES - General Setup information with Megascan specific setup" frameborder="0" allowfullscreen
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         style="position: absolute; width: 100%; height: 100%;">
 </iframe>
 </div>
@@ -244,7 +244,7 @@ This is how you change the wind speed of your assets based on UDW wind speed
 <div style="position: relative; width: 100%; padding-bottom: 56.25%">
 <iframe src="https://www.youtube.com/embed/dcRN69tyMhQ" 
         title="Ges - Explanation of the wind speed array" frameborder="0" allowfullscreen
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         style="position: absolute; width: 100%; height: 100%;">
 </iframe>
 </div>
@@ -318,7 +318,7 @@ Paste the information you copied above into the blueprint.  Then right click and
 <div style="position: relative; width: 100%; padding-bottom: 56.25%">
 <iframe src="https://www.youtube.com/embed/8yauMzqsLEE" 
         title="Ges - Level blueprint for testing" frameborder="0" allowfullscreen
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         style="position: absolute; width: 100%; height: 100%;">
 </iframe>
 </div>
