@@ -323,7 +323,28 @@ Paste the information you copied above into the blueprint.  Then right click and
 </iframe>
 </div>
 
-## 8) <u>Using an alternate wind system</u>
+## 8) Foliage Interaction
+Megascans, Project Nature, and SpeedTree have been setup to use the foliage interaction system referred to as FIWS (Foliage Interaction Wind System), this system was extracted from Project Nature so big thanks to them.
+
+Each material instance for the above systems has a check box to enable interaction. 
+
+Additionally you have to setup your character and add a component to your scene.  
+    
+   1. If you are using 3rd person character you can copy the 3rd person character in GES>Blueprints>ThirdPerson and over write your 3rd person in your content folder.
+   
+   2. Manually setup your character.  Open your characters blueprint and in components click add and search for FIWS_Bending_Component and add.  Then make sure your BP_ThirdPersonCharacter is selected and add a tag called Bending.
+   
+   ![](../_images/Screenshots/Screenshot%202024-02-26%20092817.png)
+   
+   ![](../_images/Screenshots/Screenshot%202024-02-26%20092911.png)
+   
+   3. Add the FIWS_GlobalUpdater to your scene, located in GES>FoliageInteractionWindSystem>Blueprints.
+   
+   4. Check use foliage interaction in your material instances.
+   
+   5. There are various bending option in the material instance.  You can refere to project natures documentation for further info both on wind and interaction. [Project Nature Documentation](./ProjectNatureDocumentation.pdf)
+
+## 9) <u>Using an alternate wind system</u>
 a. **Sky Creator**
 
 
