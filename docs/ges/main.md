@@ -233,6 +233,14 @@ You will need to go to the below link and copy and paste the code and hook them 
  
  ![](../_images/Screenshots/Screenshot%202024-02-22%20001319.png)
 
+
+### **Niagara**
+
+Used for your custom Niagara systems.  GES has a Niagara Parameter Collection (NPC) with 3 values, current wind direction, current wind speed, niagara wind force. NPC's are based off of MPC's in this case the GES MPC. In your particle system you can select to add one of the above values from the GES_NPC.  Some of the prebuilt niagara particles come with a wind force parameter that you can set the GES_NPC naigara wind force to.  In this case when the wind speed or direction changes the particles change accordingly.  If you do not have the wind force variable in your particle system you can get the wind speed and direction to use instead. 
+
+Only niagara systems with a tag of ng will be affected.  This way it does not interfere with other systems already integrated.  Checking/Unchecking enable niagara will start or stop particle simulation as well as set the NPC values.
+
+
 ## 5) <u>Add GES Blueprint to your Scene</u>
 
 Navigate to GlobalEnvironmentalSystem --> Blueprints and drag BP_GES to your scene.
@@ -350,3 +358,39 @@ a. **Sky Creator**
 
   [1]: https://www.unrealengine.com/marketplace/en-US/product/sky-creator
   [2]: https://www.unrealengine.com/marketplace/en-US/product/ultra-dynamic-sky
+
+## 10) <u>Other GES BP Settings</u>
+
+**Current Wind Speed** - You can change this value in the editor to simulate wind speed change
+
+**Current Wind Direction** - Same as above for wind direction
+
+**Wind Strength Multiplier** - Same as above for wind speed multiplier
+
+ **Use GES Or Weather System Wind Direction** - If checked then the GES windsock will control the wind direction.  Otherwise the weather system will control the wind direction
+ 
+**Use GES Or Weather System Wind Speed** - Same as above for wind speed
+
+**Sync UDW Override Volume Wind Direction (Only for UDW)** - When checked the direction of the windsock or weather system will also change the direction inside the override volume 
+
+**Poll for Weather Changes** - Frequency in seconds to check for weather change such as wind speed and direction
+
+**Poll UDS by Seconds For Season Change (Only for UDW)** - Frequency in seconds to check for UDS season change
+
+**Sync UDS Winter Season With Winter Weather** - This will change the weather to match the UDS season such as setting the weather to winter when the season is in winter
+
+**Begin UDS Winter Season and End UDS Winter Season** Best not to change this is a value that UDS emits for identifying a season
+
+**Change UDS Season Winter Weather Delay** - You can delay change the season to winter
+
+**UDS Season Change Winter Weather Type** - UDW preset for winter season
+
+**UDS Season Non Winter Weather Type** - UDW preset for non winter season
+
+**Enable Random Wind Speed and Enable Random Wind Direction** - this will randomly set the wind speed or direction
+
+**Random Wind Speed Timer and Random Wind Direction Timer** - Frequency in seconds to generate a new speed or direction
+ 
+ **Random min/max** the range for wind speed or direction to be used when selecting a random value. Example for UDW the wind speed range is 0-10 for another weather system it might be 0-100
+ 
+
