@@ -353,7 +353,27 @@ Additionally you have to setup your character and add a component to your scene.
    5. There are various bending option in the material instance.  You can refere to project natures documentation for further info both on wind and interaction. [Project Nature Documentation](./ProjectNatureDocumentation.pdf)
 
 ## 9) <u>Using an alternate wind system</u>
-a. **Sky Creator**
+a. **Sky Creator Setup**
+    
+    Follow the video for changing from UDS to Sky Creator
+    
+    <div style="position: relative; width: 100%; padding-bottom: 56.25%">
+    <iframe src="https://www.youtube.com/embed/PckezcXiBgs" 
+        title="GES - Sky Creator setup" frameborder="0" allowfullscreen
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        style="position: absolute; width: 100%; height: 100%;">
+    </iframe>
+    </div>
+
+    
+    Here are the links from blueprintue that you will need to copy as shown in the video.
+    
+    <a href="https://blueprintue.com/blueprint/7l0fa3pt/" target="_blank">GES Sky Creator construction script setup</a>
+    
+    <a href="https://blueprintue.com/blueprint/thu1l-ce/" target="_blank">GES Sky Creator event graph setup</a>
+    
+    
+
 
 
   [1]: https://www.unrealengine.com/marketplace/en-US/product/sky-creator
@@ -392,5 +412,10 @@ a. **Sky Creator**
 **Random Wind Speed Timer and Random Wind Direction Timer** - Frequency in seconds to generate a new speed or direction
  
  **Random min/max** the range for wind speed or direction to be used when selecting a random value. Example for UDW the wind speed range is 0-10 for another weather system it might be 0-100
+ 
+
+ 
+ <a href="https://www.youtube.com/playlist?list=PLFCVXzupw1r8cSfpG7na7TCxghJVpj1Ov" target="_blank">Link to GES Video playlist including other related videos</a>
+ 
  
 
