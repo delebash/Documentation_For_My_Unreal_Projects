@@ -353,24 +353,25 @@ Additionally you have to setup your character and add a component to your scene.
    5. There are various bending option in the material instance.  You can refere to project natures documentation for further info both on wind and interaction. [Project Nature Documentation](./ProjectNatureDocumentation.pdf)
 
 ## 9) <u>Using an alternate wind system</u>
-a. **Sky Creator Setup**
+
+**Sky Creator Setup**
     
-    Follow the video for changing from UDS to Sky Creator
+ Follow the video for changing from UDS to Sky Creator
     
-    <div style="position: relative; width: 100%; padding-bottom: 56.25%">
+ <div style="position: relative; width: 100%; padding-bottom: 56.25%">
     <iframe src="https://www.youtube.com/embed/PckezcXiBgs" 
         title="GES - Sky Creator setup" frameborder="0" allowfullscreen
         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         style="position: absolute; width: 100%; height: 100%;">
     </iframe>
-    </div>
+</div>
 
     
-    Here are the links from blueprintue that you will need to copy as shown in the video.
+Here are the links from blueprintue that you will need to copy as shown in the video.
     
-    <a href="https://blueprintue.com/blueprint/7l0fa3pt/" target="_blank">GES Sky Creator construction script setup</a>
+<a href="https://blueprintue.com/blueprint/7l0fa3pt/" target="_blank">GES Sky Creator construction script setup</a>
     
-    <a href="https://blueprintue.com/blueprint/thu1l-ce/" target="_blank">GES Sky Creator event graph setup</a>
+<a href="https://blueprintue.com/blueprint/thu1l-ce/" target="_blank">GES Sky Creator event graph setup</a>
     
     
 
