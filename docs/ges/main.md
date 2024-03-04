@@ -358,7 +358,7 @@ Additionally you have to setup your character and add a component to your scene.
     
  Follow the video for changing from UDS to Sky Creator
     
- <div style="position: relative; width: 100%; padding-bottom: 56.25%">
+<div style="position: relative; width: 100%; padding-bottom: 56.25%">
     <iframe src="https://www.youtube.com/embed/PckezcXiBgs" 
         title="GES - Sky Creator setup" frameborder="0" allowfullscreen
         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
