@@ -419,4 +419,7 @@ Here are the links from blueprintue that you will need to copy as shown in the v
  <a href="https://www.youtube.com/playlist?list=PLFCVXzupw1r8cSfpG7na7TCxghJVpj1Ov" target="_blank">Link to GES Video playlist including other related videos</a>
  
  
+## Support
+
+Join my discord channel https://discord.gg/2WkHWNDf8q
 
