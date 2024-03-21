@@ -236,10 +236,59 @@ You will need to go to the below link and copy and paste the code and hook them 
 
 ### **Niagara**
 
+<div style="position: relative; width: 100%; padding-bottom: 56.25%">
+<iframe src="https://www.youtube.com/embed/iyxYj0hEGQc" 
+        title="Ges Update - Added Niagara wind force and Random wind" frameborder="0" allowfullscreen
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        style="position: absolute; width: 100%; height: 100%;">
+</iframe>
+</div>
+
+
 Used for your custom Niagara systems.  GES has a Niagara Parameter Collection (NPC) with 3 values, current wind direction, current wind speed, niagara wind force. NPC's are based off of MPC's in this case the GES MPC. In your particle system you can select to add one of the above values from the GES_NPC.  Some of the prebuilt niagara particles come with a wind force parameter that you can set the GES_NPC naigara wind force to.  In this case when the wind speed or direction changes the particles change accordingly.  If you do not have the wind force variable in your particle system you can get the wind speed and direction to use instead. 
 
 Only niagara systems with a tag of ng will be affected.  This way it does not interfere with other systems already integrated.  Checking/Unchecking enable niagara will start or stop particle simulation as well as set the NPC values.
 
+
+### **Groom Hair**
+<div style="position: relative; width: 100%; padding-bottom: 56.25%">
+<iframe src="https://www.youtube.com/embed/Cd09fZT5bH8" 
+        title="GES Metahuman Hair Test" frameborder="0" allowfullscreen
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        style="position: absolute; width: 100%; height: 100%;">
+</iframe>
+</div>
+
+Any character that uses the Unreal Groom component can now be affected by wind speed and direction.
+
+1) Enable the Groom Plugin
+2) Connect the execution pin in the GlobalEnvironmentalSystem>Integrations>GroomHair>BPFunctions>BF_GES_GroomHair
+
+![](../_images/Screenshots/Screenshot%202024-03-21%20172051.png)
+
+3) Enable Groom in GES
+4) Add a tag to any actor with the groom component such as a metahuman, the default tag is gh but you can change that to whatever you want.  
+
+![](../_images/Screenshots/Screenshot%202024-03-21%20172220.png)
+
+### Choas Cloth
+<div style="position: relative; width: 100%; padding-bottom: 56.25%">
+<iframe src="https://www.youtube.com/embed/1M43EOeKh3Y" 
+        title="GES Chaos Cloth Test" frameborder="0" allowfullscreen
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        style="position: absolute; width: 100%; height: 100%;">
+</iframe>
+</div>
+
+
+Cloth can now be affected by wind speed and direction.  
+
+1) Enable the chaos cloth plugins if not enabled.
+2) Enable Cloth in GES
+3) Add the Wind Directional Source to your scene  
+4) Add a tag to your Wind Directional Source.  The default tag is cl you can change this to what you want.  Just make sure the tag for cloth in GES is the same tag that you add to your Wind Directional Source.
+
+![](../_images/Screenshots/Screenshot%202024-03-21%20172703.png)
 
 ## 5) <u>Add GES Blueprint to your Scene</u>
 
@@ -414,11 +463,24 @@ Here are the links from blueprintue that you will need to copy as shown in the v
  
  **Random min/max** the range for wind speed or direction to be used when selecting a random value. Example for UDW the wind speed range is 0-10 for another weather system it might be 0-100
  
+## 11) Random Wind
+
+<div style="position: relative; width: 100%; padding-bottom: 56.25%">
+<iframe src="https://www.youtube.com/embed/H58g_jiJEY4" 
+        title="GES - Added Random Wind with transitioning delay and deviation" frameborder="0" allowfullscreen
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        style="position: absolute; width: 100%; height: 100%;">
+</iframe>
+</div>
 
  
-## 11) <u>Support</u>
+## 12) <u>Support</u>
 
-Join my discord channel https://discord.gg/2WkHWNDf8q
+Join my <a href="https://discord.gg/2WkHWNDf8q" target="_blank">discord channel</a> 
 
  <a href="https://www.youtube.com/playlist?list=PLFCVXzupw1r8cSfpG7na7TCxghJVpj1Ov" target="_blank">Link to GES Video playlist including other related videos</a>
+ 
+<a href="https://trello.com/b/UwL88dv5/unreal-global-environmental-system" target="_blank">Roadmap</a> 
+ 
+ 
 
