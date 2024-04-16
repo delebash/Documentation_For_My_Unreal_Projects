@@ -193,6 +193,15 @@ Connect the line in the GES Integrations>AmbientWindSystem>BPFunctions>BF_GES_Am
 
 ### **Oceanology**
 
+<div style="position: relative; width: 100%; padding-bottom: 56.25%">
+<iframe src="https://www.youtube.com/embed/-uyVUj6A4Y4" 
+        title="GES  -  Oceanology Integration with UDS Demo" frameborder="0" allowfullscreen
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        style="position: absolute; width: 100%; height: 100%;">
+</iframe>
+</div>
+
+
 You will need to go to the below link and copy and paste the code and hook them up after you have installed Oceanology and enabled it in your Plugins for that project.
 
  Go to this link https://blueprintue.com/blueprint/1bi82s7z/ Scroll down and click on code to copy. In the GES Integrations>Oceanology>BPFunctions open BP_GES_Oceanology then zoom out and move over to get some space and paste.  Then connect things up as shown in the picture below and save and compile. 
