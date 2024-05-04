@@ -483,7 +483,26 @@ Here are the links from blueprintue that you will need to copy as shown in the v
 </div>
 
  
-## 12) <u>Support</u>
+## 13) <u>How to add a custom system to GES</u>
+
+<div style="position: relative; width: 100%; padding-bottom: 56.25%">
+<iframe src="https://www.youtube.com/embed/KeDoGpAUGYk" 
+        title="GES - How to add a custom system" frameborder="0" allowfullscreen
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        style="position: absolute; width: 100%; height: 100%;">
+</iframe>
+</div>
+
+ 
+## 14) <u>Common Problems</u>
+
+If a particular system is not working than you probably installed that system after you added GES.  The best resolution is remove the GES_BP from your scene.  Close your project and delete the GES folder.  Then re-add the GES folder and open your project.  A little more explanation about this issue.  Most systems in GES use a material parameter collection.  Let's take Mawi as an example.  When you install a Mawi pack an MWCommon folder is also added.  The Mawi MPC that controls the wind for Mawi assets is in this folder.  GES looks for the MPC in this folder location.  If Mawi is not installed and you open the GES blueprint and save it then it will save in a bad state as it is looking for the Mawi MPC and cannot find it.  That is why deleting GES and re-adding it usually fixes this problem.  One way to check and see if the problem is that GES cannot find the correct MPC or got saved in a bad state is to open the corresponding function for that system.  Each system is located in the GES Integrations folder.  For example to check the Mawi function open GlobalEnvironmentalSystem\Integrations\Mawi\BPFunctions\BP_GES_Mawi The MPC values should look like this ![](../_images/Screenshots/Screenshot%202024-05-03%20093446.png)
+
+![](../_images/Screenshots/Screenshot%202024-05-03%20093429.png)
+
+If the settings are blank then in the Collection drop down you need to find the Mawi MPC in this case MPC_MW and then set the correct parameter value.  In most cases you should not have to do this manually if you are installing GES correctly by installing the system you want to use first and then adding GES or by fixing this issue by deleting the GES folder and re-adding GES after you installed the system you want to use.
+ 
+## 13) <u>Support</u>
 
 Join my <a href="https://discord.gg/2WkHWNDf8q" target="_blank">discord channel</a> 
 
