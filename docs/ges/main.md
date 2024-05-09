@@ -300,6 +300,14 @@ Cloth can now be affected by wind speed and direction.
 
 ![](../_images/Screenshots/Screenshot%202024-03-21%20172703.png)
 
+
+### **Simple Wind**
+
+Use the Simple Wind node that comes with UE.  Just add the MPC's shown in the picture. An example can be found in GlobalEnvironmentalSystem\Integrations\Megascans\MSPresets\M_MS_Foliage_Material\M_MS_Foliage_Material.  The red comment box called Wind.
+
+![](../_images/Screenshots/Screenshot%202024-05-09%20094926.png)
+
+
 ## 5) <u>Add GES Blueprint to your Scene</u>
 
 Navigate to GlobalEnvironmentalSystem --> Blueprints and drag BP_GES to your scene.
