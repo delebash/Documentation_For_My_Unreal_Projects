@@ -300,6 +300,13 @@ Cloth can now be affected by wind speed and direction.
 
 ![](../_images/Screenshots/Screenshot%202024-03-21%20172703.png)
 
+5) Open the GES blueprint and select the RunGlobalEnvironmentalSystems function on the left.  Scroll down until you see Wind Directional Source with tag cloth and open that function.  Connect the function pin.
+
+![](../_images/Screenshots/Screenshot%202024-06-19%20143235.png)
+
+![](../_images/Screenshots/Screenshot%202024-06-19%20143256.png)
+
+
 
 ### **Simple Wind**
 
