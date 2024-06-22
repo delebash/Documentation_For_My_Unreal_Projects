@@ -159,7 +159,9 @@ Same as foliage
 
 2) Copy the Materials folder and paste in each of your Project Nature packs folders overwriting the Materials folder.
 
-3) If you want UDW weather effects you need to add that UDW function to the material function you want to use.  As an example for the spruce pack you can copy the PN_interactiveSpruceForest and overwrite the existing one.  All I am doing is adding the UDW function to it. GES comes with a convenience function that wraps the UDW Weather effects.  In the material you want to add the weather effects to type MF_ApplyWetnessSnowDustUDW and hook it up to your material at the end.
+3) If you want UDW weather effects you need to add that UDW function to the material function you want to use.  As an example for the spruce pack you can copy the PN_interactiveSpruceForest and overwrite the existing one.  All I am doing is adding the UDW function to it. GES comes with a convenience function that wraps the UDW Weather effects.  In the material you want to add the weather effects to type MF_ApplyWetnessSnowDustUDW and hook it up to your material at the end. **NOTE:** If you are copying the examples PN_interactiveSpruceForest or PN_GrassLibrary with udw and season change integration you still need to copy over the materials folder afterwards.  Each pack you are using must have the materials folder copied over.
+
+
 
 ### **SpeedTree setup**
 
