@@ -24,9 +24,8 @@ Video Demo <div style="position: relative; width: 100%; padding-bottom: 56.25%">
 
 4) Foliage Health And Season -- Adjust the color of your foliage.  Extracted from MS Global Foliage Actor. Season color change linked to UDW season change for Megascan foliage and trees.
 
-5) Ambient Wind System Integration -- Enable any actor to receive wind  https://www.unrealengine.com/marketplace/en-US/product/ambient-wind-system
 
-6) Project Nature Integration   -- https://www.unrealengine.com/marketplace/en-US/profile/Project+Nature?
+5) Project Nature Integration   -- https://www.unrealengine.com/marketplace/en-US/profile/Project+Nature?
 
 6) UE Water Integration -- Change the Wave Asset file based on the current Weather 
 
@@ -74,6 +73,26 @@ Video Demo <div style="position: relative; width: 100%; padding-bottom: 56.25%">
 ## 4) <u>Individual System setup</u>
 
 ### **Megascan Setup**
+There are two different setups one for FAB and the old bridge version
+
+
+**FAB Instructions**
+
+1) Download some megascan assets and add to your project from the UE FAB plugin.  Materials that are downloaded depending on the asset type from FAB that you download are  M_MS_Base, M_MS_Base_Fuzz, M_MS_Billboard, M_MS_Foliage, M_MS_Glass, M_MS_Srf.  M_MS_Foliage and Billboard are modified to include season change and foliage interaction. All other materials just have the UDW weather effects added with no other changes.
+
+2) You should have already downloaded GES and copied it to your project according to initial installation instructions.
+
+3) Close your project.  Copy the folder GlobalEnvironmentalSystem\Integrations\Megascans\Fab and paste it in your Unreal Engine plugins folder.  Example C:\Program Files\Epic Games\UE_5.5\Engine\Plugins.  This will overwrite some of the materials in the Fab folder that is already in the plugins folder.
+
+**NOTE:**  For Megascan trees the install instruction has not changed as the materials are still downloaded to the MS Preset folder.
+
+**For MS Trees:**
+
+1) Install a tree set from FAB such as European Beach.  
+
+2) Copy GlobalEnvironmentalSystem/Integrations/Megascans/MSPresets/MS_Foliage_Material and paste it into your Content/MSPresets folder overwriting some of the materials in the existing MS_Foliage_Material folder.
+
+**Old Bridge pre FAB instructions**
 
 1) First you need to download some megascan assets so that all the default materials will be downloaded that we will eventually overwrite some of them in the MSPreset folder.
 
@@ -86,6 +105,8 @@ Video Demo <div style="position: relative; width: 100%; padding-bottom: 56.25%">
 > Example downloads I use. I download a rock or log -- uses the M_MS_Default_Material.  Next a rock with moss -- uses the M_MS_Default_Fuzz_Material.  Some foliage -- uses M_MS_Foliage_Material. A Surface -- M_MS_Surface_Material. A Tree pack - use the MS_Foliage_Material.
 
 4) With your project closed.  From your folder explorer in your projects Content Folder, navigate to the folder GlobalEnvironmentalSystem --> Integrations --> Megascans.  Copy the MSPreset folder and paste it in your Content folder overwriting the existing MSPreset folder. 
+
+**Continue install instructions regardless if you have installed from FAB or Bridge**
 
 #### Material Instance for Foliage
 ##### Wind
@@ -185,7 +206,7 @@ Integrations>Particle_Wind_Control_System>BPFunctions>BP_GES_Particles_Wind_Cont
 
 ![](../_images/Screenshots/Screenshot%202024-02-21%20232140.png)
 
-### **Ambient Wind System** 
+### **Ambient Wind System** **--Depricated**
 
 Connect the line in the GES Integrations>AmbientWindSystem>BPFunctions>BF_GES_AmbientWindSystem! function.
 
@@ -243,6 +264,29 @@ You will need to go to the below link and copy and paste the code and hook them 
  Go to this link https://blueprintue.com/blueprint/z_d8ydzp/ Scroll down and click on code to copy. In the GES Integrations>Lakeology>BPFunctions open BP_GES_Lakeology then zoom out and move over to get some space and paste.  Then connect things up as shown in the picture below and save and compile.
  
  ![](../_images/Screenshots/Screenshot%202024-02-22%20001319.png)
+
+**Oceanology Next Gen Preset Transition Low Hi**
+1) In your scene click on Edit BP_GES, this will open the GES Blueprint.
+
+2) On the left click on double click on Event Graph.
+
+3) You will see a connection point for Oceanology.
+
+![](../_images/Screenshots/Screenshot%202025-01-01%20143309.png)
+
+4) Go to thia link and in the Code to Copy box click on the copy button to copy the blueprint nodes. https://blueprintue.com/blueprint/kr9d94-d/
+
+5) Paste this in the event graph you have open and connect it like the picture below
+
+![](../_images/Screenshots/Screenshot%202025-01-01%20144134.png)
+
+6) Save and Compile, close the blueprint
+
+7) On GES BP in your scene scroll the the Oceanology Next Gen properties.  Enable it.  Select your Lo and Hi preset.
+
+![](../_images/Screenshots/Screenshot%202025-01-01%20144449.png)
+
+
 
 
 ### **Niagara**
