@@ -2,53 +2,51 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
 
-  <!-- Replace with your own title and description. -->
-  <title>Project Documentation</title>
-  <meta name="description" content="Documentation for my opensource projects">
-  <meta http-equiv='cache-control' content='no-cache'>
-  <meta http-equiv='expires' content='0'>
-  <meta http-equiv='pragma' content='no-cache'>
-  <!-- Default Theme (see https://docsify.js.org/#/themes) -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  <link rel="stylesheet" href="theme-custom.css">
+    <!-- Replace with your own title and description. -->
+    <title>Project Documentation</title>
+    <meta name="description" content="Documentation for my opensource projects">
+    <!-- Default Theme (see https://docsify.js.org/#/themes) -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+    <link rel="stylesheet" href="theme-custom.css">
 
 
 </head>
 
 <body>
-  <div id="app">Please wait...</div>
+<div id="app">Please wait...</div>
 
-  <script>
+<script>
     // Docsify Configuration (see https://docsify.js.org/#/configuration)
     window.$docsify = {
-      name:'Dans Unreal Projects',
-          // Sidebar Configuration
-      auto2top: true,
-      loadSidebar: true,
-      maxLevel: 5,
-      // Set subMaxLevel to 0 to remove automatic display of page table of contents (TOC) in Sidebar
-      subMaxLevel: 5,
+        name: 'Dans Unreal Projects',
+        // Sidebar Configuration
+        auto2top: true,
+        loadSidebar: true,
+        maxLevel: 5,
+        // Set subMaxLevel to 0 to remove automatic display of page table of contents (TOC) in Sidebar
+        subMaxLevel: 5,
 
-      // Search Plugin Configuration
-      search: {
-        placeholder: 'Type to search',
-        noData: 'No matches found.',
-        // Headline depth, 1 - 6
-        depth: 2,
-      }
+        // Search Plugin Configuration
+        search: {
+            placeholder: 'Type to search',
+            noData: 'No matches found.',
+            // Headline depth, 1 - 6
+            depth: 2,
+        },
+        requestHeaders: {'cache-control': 'no-cache',},
     };
-  </script>
+</script>
 
-  <!-- Required -->
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+<!-- Required -->
+<script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
 
-  <!-- Recommended -->
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
+<!-- Recommended -->
+<script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
 
 </body>
 </html>

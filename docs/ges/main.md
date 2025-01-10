@@ -214,7 +214,36 @@ Connect the line in the GES Integrations>AmbientWindSystem>BPFunctions>BF_GES_Am
 ![](../_images/Screenshots/Screenshot%202024-02-02%20185824.png)
 
 
-### **Oceanology**
+### **Oceanology Next Gen**
+
+**Preset Transition Low Hi**
+ 
+ This allows you to specify a low preset such as calm waves to a high preset such as gail.  Then as the wind speed changes the waves transition between the two presets.
+ 
+1) In your scene click on Edit BP_GES, this will open the GES Blueprint.
+
+2) On the left click on double click on Event Graph.
+
+3) You will see a connection point for Oceanology.
+
+![](../_images/Screenshots/Screenshot%202025-01-01%20143309.png)
+
+4) Go to this link and in the Code to Copy box click on the copy button to copy the blueprint nodes. https://blueprintue.com/blueprint/kr9d94-d/
+
+5) Paste this in the event graph you have open and connect it like the picture below
+
+![](../_images/Screenshots/Screenshot%202025-01-01%20144134.png)
+
+6) Save and Compile, close the blueprint
+
+7) On GES BP in your scene scroll the the Oceanology Next Gen properties.  Enable it.  Select your Lo and Hi preset.
+
+![](../_images/Screenshots/Screenshot%202025-01-01%20144449.png)
+
+Note:  I have not implemented the windspeed array like Oceanology legacy, if requested by users I will otherwise the preset transition works well.
+
+
+### **Oceanology Legacy**
 
 <div style="position: relative; width: 100%; padding-bottom: 56.25%">
 <iframe src="https://www.youtube.com/embed/-uyVUj6A4Y4" 
@@ -257,34 +286,13 @@ You will need to go to the below link and copy and paste the code and hook them 
 Instead of using the wind speed array to determine which oceanology preset to use you can specify a low to high preset.  As an example choose a Low Oceanology Preset of Beufort Calm and a Hi Oceanology Preset of Beufort Severe Gail. Then in addition to checking OC Use Preset Transition check OC Use Low Hi  Transition.  This means that as the wind speed increases it will transition from the low preset to the high preset and vice verse.
 
 
-### **Oceanology Lake referred to as Lakeology**
+### **Oceanology Legacy Lake referred to as Lakeology**
 
 You will need to go to the below link and copy and paste the code and hook them up after you have installed Oceanology and enabled it in your Plugins for that project.
 
  Go to this link https://blueprintue.com/blueprint/z_d8ydzp/ Scroll down and click on code to copy. In the GES Integrations>Lakeology>BPFunctions open BP_GES_Lakeology then zoom out and move over to get some space and paste.  Then connect things up as shown in the picture below and save and compile.
  
  ![](../_images/Screenshots/Screenshot%202024-02-22%20001319.png)
-
-**Oceanology Next Gen Preset Transition Low Hi**
-1) In your scene click on Edit BP_GES, this will open the GES Blueprint.
-
-2) On the left click on double click on Event Graph.
-
-3) You will see a connection point for Oceanology.
-
-![](../_images/Screenshots/Screenshot%202025-01-01%20143309.png)
-
-4) Go to thia link and in the Code to Copy box click on the copy button to copy the blueprint nodes. https://blueprintue.com/blueprint/kr9d94-d/
-
-5) Paste this in the event graph you have open and connect it like the picture below
-
-![](../_images/Screenshots/Screenshot%202025-01-01%20144134.png)
-
-6) Save and Compile, close the blueprint
-
-7) On GES BP in your scene scroll the the Oceanology Next Gen properties.  Enable it.  Select your Lo and Hi preset.
-
-![](../_images/Screenshots/Screenshot%202025-01-01%20144449.png)
 
 
 
